@@ -3,8 +3,15 @@ require_relative 'bike'
 class DockingStation
     def release_bike
       Bike.new
-    end 
+    end
+
     def dock_bike(mybike)
-        mybike.class == Bike ? true : false
-    end 
+        @bike = mybike
+    end
+
+    def see_bike
+        @bike
+    end
+
+    attr_reader :see_bike
 end
